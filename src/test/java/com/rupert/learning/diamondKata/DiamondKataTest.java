@@ -12,5 +12,10 @@ public class DiamondKataTest {
 	public void a_Diamond() {  	
 		assertEquals( "A" , app.diamondKata("A") );
 	}
+	
+	@Test
+	public void b_Diamond() {  	
+		assertEquals( " A\nB B\n A" , app.diamondKata("B") );
+	}
 	   
 }

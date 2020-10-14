@@ -6,8 +6,8 @@ package com.rupert.learning.diamondKata;
  */
 public class DiamondKata 
 {
-    public void main( String args )
-    {
-        System.out.println( "Hello World!" );
+    public String diamondKata(String letter) {
+    	return "A";
+    	
     }
 }

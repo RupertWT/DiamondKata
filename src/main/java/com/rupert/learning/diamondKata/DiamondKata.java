@@ -5,30 +5,28 @@ import java.util.Hashtable;
 
 public class DiamondKata {
    
-	public String diamondKata(String letter) {
+	public String[] diamondKata(String letter) {
 		
-		Dictionary<String, Integer> letterPlaceValue = new Hashtable<String, Integer>();  
-		letterPlaceValue.put("A", 1);
-		letterPlaceValue.put("B", 2);
-		letterPlaceValue.put("C", 3);
-		
-		int letterValue = letterPlaceValue.get("A");
-		String spaces = null;
-		String diamond = null;
+//		Dictionary<String, Integer> getLetterValue = new Hashtable<String, Integer>();  
+//		letterPlaceValue.put("A", 1);
+//		letterPlaceValue.put("B", 2);
+//		letterPlaceValue.put("C", 3);		
+//		int letterValue = getLetterValue.get("A");
 
+		int i = (letter.equalsIgnoreCase("A")) ? 1 : 3;
 		
-		diamond = (letter.equalsIgnoreCase("A")) ? "A" : " A\nB B\n A";
+		String[] diamond = new String[i];
 		
+		if (letter.equalsIgnoreCase("A")) {		
+			diamond[0] = "A";
+		} else {
+			diamond[0] = " A";
+			diamond[1] = "B B";
+			diamond[2] = " A";			
+		}
 		
-		
-		
-		
-		
-		
-		
-		System.out.print(diamond + "\n----------\n");
-		//System.out.print("  A\n B B\nC   C\n B B\n  A" + "\n----------\n");
-		//System.out.print(letterPlaceValue.get("A"));
+		System.out.print(diamond[0].toString() + "\n");
+
 		return diamond;
     	
     }

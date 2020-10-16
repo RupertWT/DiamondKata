@@ -7,27 +7,43 @@ public class DiamondKata {
    
 	public String[] diamondKata(String letter) {
 		
-//		Dictionary<String, Integer> getLetterValue = new Hashtable<String, Integer>();  
-//		letterPlaceValue.put("A", 1);
-//		letterPlaceValue.put("B", 2);
-//		letterPlaceValue.put("C", 3);		
-//		int letterValue = getLetterValue.get("A");
+		Dictionary<String, Integer> getLetterValue = new Hashtable<String, Integer>();  
+		getLetterValue.put("A", 1);
+		getLetterValue.put("B", 2);	
+		getLetterValue.put("C", 3);
+		
+		int letterValue = (getLetterValue.get(letter) * 2) - 1;
+		
+		String[] diamond = new String[letterValue];
+		
+		System.out.print("length = " + diamond.length + "\n");
 
-		int i = (letter.equalsIgnoreCase("A")) ? 1 : 3;
-		
-		String[] diamond = new String[i];
-		
 		if (letter.equalsIgnoreCase("A")) {		
 			diamond[0] = "A";
-		} else {
+		} else if (letter.equalsIgnoreCase("B")) {
 			diamond[0] = " A";
 			diamond[1] = "B B";
 			diamond[2] = " A";			
+		} else {
+			diamond[0] = "";
+			diamond[1] = "";
+			diamond[2] = "";	
+			diamond[3] = "";	
+			diamond[4] = "";		
 		}
 		
-		System.out.print(diamond[0].toString() + "\n");
+		printResult(diamond);
 
 		return diamond;
     	
     }
+
+	private void printResult(String[] diamond) {
+		
+		for (int i = 0; i < diamond.length; i++) {
+			System.out.print(diamond[i].toString() + "\n");
+		}
+		System.out.print("----------\n"); 
+		
+	}
 }

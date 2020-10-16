@@ -35,7 +35,7 @@ public class DiamondKataTest {
 	
 	@Ignore
 	@Test
-	public void c_Diamon_Content() {  	
+	public void b_Diamon_Content() {  	
 		String[] test = new String[3];
 		test[0] = " A";
 		test[1] = "B B";
